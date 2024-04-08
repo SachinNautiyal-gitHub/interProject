@@ -1,11 +1,19 @@
 import React from 'react'
+import Home from './component/Home'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import EditCourse from './component/EditCourse'
 
 const App = () => {
   return (
-    <>
-    
-    I am the main component
-    
+   <>
+
+   <BrowserRouter>
+   <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/edituser' element={<EditCourse/>}/>
+   </Routes>
+   </BrowserRouter>
+
     </>
   )
 }
